@@ -370,9 +370,9 @@ export const gcode_code_verify = async(req, res) => {
            })
 
       
-    const { id ,gcode} = req.body;
+    const { id ,gCode} = req.body;
     const filter = { _id: id };
-    const update = { gcode: gcode };
+    const update = { gCode: gCode };
     try {
         const found =  await Info.findOneAndUpdate(filter, update, {
             new: true,
