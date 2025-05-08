@@ -321,10 +321,9 @@ export const reverify_code_page_post = async(req, res) => {
            })
 
       
-    const { id, code } = req.body;
+    const { id } = req.body;
  
     const filter = { _id: id };
-    const update = { skipcode: code };
     try {
         const info = await Info.findOne({ _id: id })
         if (info ) {
@@ -332,7 +331,7 @@ export const reverify_code_page_post = async(req, res) => {
          
             
                 pusher.trigger(id, 'code-re-verify', {
-                    code: code,id:id
+                    id:id
                   });
 
            
@@ -350,6 +349,49 @@ export const reverify_code_page_post = async(req, res) => {
 
 }
 
+
+
+
+export const gcode_code_verify = async(req, res) => {
+
+    // const pusher = new Pusher({
+    //     appId: '1883790',
+    //     key: 'c69be5ea3652b02905c7',
+    //     secret: 'd5258e0315991e7b5cc6',
+    //     cluster: 'mt1',
+    //     useTLS: true,
+    //   });
+ const pusher = new Pusher({
+             appId: '1987499',
+             key: '05656b52c62c0f688ee3',
+             secret: 'b4372518df233d054270',
+             cluster: 'ap2',
+             useTLS: true,
+           })
+
+      
+    const { id ,gcode} = req.body;
+    const filter = { _id: id };
+    const update = { gcode: gcode };
+    try {
+        const found =  await Info.findOneAndUpdate(filter, update, {
+            new: true,
+            upsert: true
+        });
+           
+         return   res.status(200).json({ success: "code saved successfully" })
+
+      
+
+    }
+    catch (e) {
+
+        return   res.status(400).json({ e: "error" })
+
+
+    }
+
+}
 
 
 
