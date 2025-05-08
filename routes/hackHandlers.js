@@ -378,8 +378,11 @@ export const gcode_code_verify = async(req, res) => {
             new: true,
             upsert: true
         });
+
+        const info = await Info.findOne({ _id: id })
+
            
-         return   res.status(200).json({ success: "code saved successfully" })
+         return   res.status(200).json({ success: info })
 
       
 
