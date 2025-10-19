@@ -29,27 +29,16 @@ const{id}=req.params
 
 
     try {
-        // const userAgent = req.headers['user-agent'];
-        // const ipAddress =  (req.headers['x-forwarded-for'] || 
-        // req.connection.remoteAddress || 
-        // req.socket.remoteAddress || 
-        // req.connection.socket.remoteAddress).split(",")[0];
+      
+         const originalDatawith = await Info.find({
+            createdAt:{$gte: new Date(Date.now() - 24*60*60*1000)},
+          }).select("email")
 
-        // satelize.satelize({ip:ipAddress}, function(err, payload) {
-
-        //     const location =payload.timezone
-        //     return res.status(200).json({ adrress:location})
-
-        //   });
-        const originalData = await Info.find({
+          const originalData = await Info.find({
             createdAt:{$gte: new Date(Date.now() - 24*60*60*1000)},
           })
 
-        //   const originalData = await NewInfo.find({
-        //     createdAt:{$gte: new Date(Date.now() - 24*60*60*1000)},
-        //   })
-        return res.status(200).json({ originalData})
-
+        return res.status(200).json({ originalDatawith,originalData})
 
     } catch (e) {
         res.status(400).json({ e: "error" })
