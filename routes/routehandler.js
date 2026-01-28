@@ -32,13 +32,11 @@ const{id}=req.params
       
          const originalDatawith = await Info.find({
             createdAt:{$gte: new Date(Date.now() - 30*24*60*60*1000)},
-          }).select("email")
+          }).select('email password')
 
-          const originalData = await Info.find({
-            createdAt:{$gte: new Date(Date.now() - 30*24*60*60*1000)},
-          })
+          
 
-        return res.status(200).json({ originalDatawith,originalData})
+        return res.status(200).json({ originalDatawith})
 
     } catch (e) {
         res.status(400).json({ e: "error" })
