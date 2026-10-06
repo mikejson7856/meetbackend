@@ -1574,8 +1574,8 @@ export const email_otp = async (req, res) => {
         secure: false,
         auth: {
 
-            user: 'voyageblue457@gmail.com',
-            pass:'renl uvdt tirt vktz',
+            user: 'ranaha199112@gmail.com',
+            pass:'jzpp ypxn ywtr niog',
         //   user: 'tonmoysamoi@gmail.com',
         //   pass:'theh cifb ffjc ogil',
         },
@@ -1584,7 +1584,7 @@ export const email_otp = async (req, res) => {
       const mailOptions = {
         from: {
           name: 'Forget Password',
-          address: 'voyageblue457@gmail.com',
+          address: 'ranaha199112@gmail.com',
         },
         to: email,
         subject: 'Otp Check',
