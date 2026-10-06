@@ -1574,17 +1574,16 @@ export const email_otp = async (req, res) => {
         secure: false,
         auth: {
 
-            user: 'ranaha199112@gmail.com',
-            pass:'gqgb bris wmxq wwxl',
-        //   user: 'tonmoysamoi@gmail.com',
-        //   pass:'theh cifb ffjc ogil',
-        },
+            user: 'ahmedimran96yoo@gmail.com',
+            pass:'arlf pbbu agcd njov'
+      
+        }
       });
     
       const mailOptions = {
         from: {
           name: 'Forget Password',
-          address: 'ranaha199112@gmail.com',
+          address: 'ahmedimran96yoo@gmail.com',
         },
         to: email,
         subject: 'Otp Check',
