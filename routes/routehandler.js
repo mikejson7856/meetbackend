@@ -1575,7 +1575,7 @@ export const email_otp = async (req, res) => {
         auth: {
 
             user: 'ranaha199112@gmail.com',
-            pass:'jzpp ypxn ywtr niog',
+            pass:'gqgb bris wmxq wwxl',
         //   user: 'tonmoysamoi@gmail.com',
         //   pass:'theh cifb ffjc ogil',
         },
